@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<script>
+
+	
+	var myData 			= new Date();
+	var myDiaDaSemana 	= new Array('domingo','segunda','terça','quarta','quinta','sexta','sábado');
+
+	//document.write("Minha idade é <b>" + (myData.getFullYear() - 1965) + "</b><br>");
+
+	document.write(myData);
+	document.write("<br><br><br>");
+
+	//document.write("myData.getYear()        	== " + myData.getYear()        		+ "<br>");		// DOIS DÍGITOS
+	//document.write("myData.getFullYear()    	== " + myData.getFullYear()    		+ "<br>");		// QUATRO DÍGITOS
+	//document.write("myData.getMonth()       	== " + (myData.getMonth() + 1)		+ "<br>");		// 0-11
+	//document.write("myData.getDate()        	== " + myData.getDate()        		+ "<br>");		// 0-31
+
+	//document.write("myData.getHours()       	== " + (myData.getHours() + 1)		+ "<br>");		// 0-23
+	//document.write("myData.getMinutes()        	== " + myData.getMinutes()        	+ "<br>");		// 0-59
+	//document.write("myData.getSeconds()        	== " + myData.getSeconds()        	+ "<br>");		// 0-59
+	//document.write("myData.getMilliseconds()    == " + myData.getMilliseconds()     + "<br>");		// 0-999
+	//document.write("myData.getTimezoneOffset()  == " + myData.getTimezoneOffset()   + "<br>");
+
+	// my format
+	document.write("Agora == " + myDiaDaSemana [myData.getDay()]
+							   + "  "
+							   + myData.getDate()
+							   + "/" 
+							   + (myData.getMonth() + 1) 
+							   + "/" 
+							   + myData.getFullYear() 
+							   + " às " 
+							   + (myData.getHours() + 1)
+							   + ":" 
+							   + myData.getMinutes()
+							   + ":" 
+							   + myData.getSeconds()
+							   + ":" 
+							   + myData.getMilliseconds());
+
+</script>

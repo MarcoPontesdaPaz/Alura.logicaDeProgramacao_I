@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+	function mostrarAsterisco (numeroAstericos) {
+
+		var asterisco = "";
+
+		for (var i = 1; i <= numeroAstericos; i++) {
+			asterisco = asterisco + "*";
+		}
+
+		document.write(asterisco);
+		pularLinha(1);
+	}	
+
+	for (var linha = 1; linha <= 5; linha++) {
+
+		mostrarAsterisco (10);
+	}
+
+</script>
+

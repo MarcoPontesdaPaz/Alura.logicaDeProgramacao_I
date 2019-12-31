@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	var nomeFlavio = 'Flávio';
+	var nomeJoaquim = 'Joquim';
+	var nomeBarney = 'Barney';
+
+	var idadeFlavio = 39;
+	var idadeJoaquim = 20;
+	var idadeBarney = 51;
+
+	var media = ((idadeFlavio + idadeJoaquim + idadeBarney)/3);
+
+	document.write("A idade de " + nomeFlavio + "  é " + idadeFlavio);
+	pularLinha(1);
+	document.write("A idade de " + nomeJoaquim + " é " + idadeJoaquim);
+	pularLinha(2);
+	document.write("A idade de " + nomeBarney + "  é " + idadeBarney);
+	pularLinha(3);
+	document.write("A média das idades é " + media);
+	pularLinha(4);
+	document.write("A média das idades é " + Math.round(media, 2));
+	pularLinha(5);
+	document.write("A média das idades é " + media.toFixed(3));
+
+</script>

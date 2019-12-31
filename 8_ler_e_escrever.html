@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Exibir</button>
+
+<script>
+
+	// 
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+
+	var input = document.querySelector("input")
+
+    function tchau() {
+        alert(input.value);
+     	//mostrarString (input.value);
+     	input.value = "";
+     	input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = tchau;
+
+</script>

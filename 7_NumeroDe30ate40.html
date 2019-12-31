@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+	// principal
+	var numero = 30;
+	while (numero <= 41) {
+
+		if ((numero == 33) || (numero == 37) ){
+			//
+		} else {
+			mostrarString (numero);
+		}
+
+		numero++;
+	}
+
+</script>

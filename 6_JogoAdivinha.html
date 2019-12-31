@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+	var numeroPensado = Math.round(Math.random() * 10);
+	var tentativas = 1
+
+	console.log(numeroPensado);
+
+	for (var chute = 0; chute != numeroPensado; tentativas++) {
+
+		chute = parseInt(prompt("Digite um numero de 0 até 10: "));
+
+		if (chute != numeroPensado){
+			// mostrarString("Vc error !");
+
+			//break;
+
+		} else {
+			mostrarString("Vc acertou com " + tentativas + " tentativa(s) !");
+		}
+	}
+
+</script>
+

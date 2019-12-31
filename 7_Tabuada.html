@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+	// principal
+	var tabuadaDe = parseInt(prompt("Vc quer a tabuada de ? "));
+
+	for (var numero = 1; numero <= 10; numero++) {
+		mostrarString (tabuadaDe + " x " + numero + " == " + (tabuadaDe * numero));
+	}
+
+	alert(idade);	
+
+</script>

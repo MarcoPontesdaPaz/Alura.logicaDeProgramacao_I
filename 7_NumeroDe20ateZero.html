@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+	// principal
+	for (var numero = 20; numero >= 0; numero--) {
+
+		mostrarString (numero);
+	}
+
+</script>

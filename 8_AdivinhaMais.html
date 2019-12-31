@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com meu segredo</button>
+
+<script>
+
+	function sortear () {
+		return Math.round(Math.random() * 10);
+	}
+
+	function sortearNumeros (quantidade) {
+
+		var segredos = [];						// array de itens a retornar
+		var numero = 1							// contador
+
+		// popula a lista
+		while (numero <= quantidade) {
+			
+			var achou = false;	
+			var numeroAleatorio = sortear();	// número aleatório
+
+			// verifica se o número aleatório já existe na lista
+			//alert (segredos.length)
+			for (var i=0; i < segredos.length; i++) {
+
+				if (numeroAleatorio == 0) {
+					achou = true;
+					break
+				} else if (segredos[i] == numeroAleatorio ) {
+					achou = true;
+					break
+				}
+			}
+
+			if (achou == false){
+				segredos.push (numeroAleatorio)
+				numero++;
+			}
+		}
+
+		return segredos
+	}
+
+	//var meuSegredo = Math.round(Math.random() * 10);
+	//var meuSegredo = [5, 6, 7, 4];
+
+	//var meuSegredo = [];
+	//meuSegredo.push(sortear());
+	//meuSegredo.push(sortear());
+	//meuSegredo.push(sortear());
+	//meuSegredo.push(sortear());
+
+	var meuSegredo = sortearNumeros (5);
+
+	console.log (meuSegredo)
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verificar() {
+
+		var achou = false;
+
+		for (i=0; i < meuSegredo.length; i++) {
+
+			if (input.value == meuSegredo[i]) {
+				alert("Vc acertou !!");
+			
+				achou = true;
+			
+				break;
+			}
+		}
+
+		if (achou == false) {
+			alert("Vc errou !!");
+		}
+
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verificar;						// sem (), o código de "verificar" é copiado para dentro do vento click do button
+
+</script>

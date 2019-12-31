@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+
+<script>
+
+	// Functions
+	function pularLinha(linhas){
+
+		for (var i=0; i<linhas; i++){
+			document.write("<BR>");
+		}
+	}
+
+	function mostrarString (string) {
+		document.write(string);
+		pularLinha(1);
+	}
+
+	function calcularImc(peso, altura){
+		return Math.round(peso / (altura * altura));
+	}	
+
+	//mostrarString ("O IMC de Marcelo é " + calcularImc (98, 1.74));
+	//mostrarString ("O IMC de Marcelo é " + calcularImc (prompt("Peso ?"), prompt("Altura ?")));
+
+	var nome = prompt ("Nome ? ");
+	var peso = prompt ("Peso ? ");
+	var altura = prompt ("Altura ? ");
+	var imc = calcularImc (peso, altura);
+
+	mostrarString ("O IMC de " + nome + " é " + imc);
+	
+	if (imc < 17) {
+
+		mostrarString ("Seu IMC está <b>MUTO abaixo</b> do indicado.");		
+
+	} else if (imc <= 18.49){
+
+		mostrarString ("Seu IMC está abaixo do indicado.");
+
+	} else if (imc <= 24.99) {
+
+		mostrarString ("Seu IMC está ótimo.");
+
+	} else if (imc <= 34.99) {
+
+		mostrarString ("Seu IMC indica obesidade I.");		
+
+	} else if (imc <= 39.99) {
+
+		mostrarString ("Seu IMC indica obesidade II.");		
+
+	} else {
+
+		mostrarString ("Seu IMC indica obesidade Móbida.");		
+	}
+
+	//		&&   	and 
+	//		||		or
+
+	//mostrarString ("O IMC de " + prompt ("Nome ? ") + " é " + calcularImc (prompt ("Peso ? "), prompt ("Altura ? ")));
+
+</script>
+
